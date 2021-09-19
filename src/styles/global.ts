@@ -6,5 +6,13 @@ export default createGlobalStyle`
   padding:0;
   box-sizing: border-box;
 }
+body{
+  font: 16px "Raleway", Arial, sans-serif;
+  color: #E7E7EB;
+}
+
+button{
+  border: none;
+}
 
 `;
