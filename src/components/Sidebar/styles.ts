@@ -5,7 +5,7 @@ export const Container = styled.aside`
   background-position: center;
   background-repeat: no-repeat; */
   height: 100vh;
-  max-width: 460px;
+  width: 28.75rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,7 +24,7 @@ export const Header = styled.header`
     font-size: 1rem;
     line-height: 19px;
     color: #e7e7eb;
-    padding: 10px 18px;
+    padding: 0.625rem 1.125rem;
     transition: filter 0.2s;
 
     &:hover {
@@ -56,6 +56,7 @@ export const WeatherInfo = styled.section`
     font-weight: 600;
     font-size: 2.25rem;
     color: #a09fb1;
+    text-transform: capitalize;
   }
 `;
 

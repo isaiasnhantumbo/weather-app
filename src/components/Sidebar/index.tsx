@@ -1,13 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { RoundButton } from '../RoundButton';
 import { MdMyLocation, MdPlace } from 'react-icons/md';
-import IsoRainSwrsDay from '../../assets/HeavyRain.png';
 
 import { City, Container, Footer, Header, WeatherInfo } from './styles';
+import { format, fromUnixTime } from 'date-fns';
+interface SidebarProps {
+  city: string;
+  currentWeather: {
+    dt: number;
+    temp: number;
+    humidity: number;
+    wind_speed: number;
+    visibility: string;
+    pressure: number;
+    weather: {
+      main: string;
+      description: string;
+      icon: string;
+    }[];
+  };
+}
 
-interface SidebarProps {}
+function Sidebar({ city, currentWeather }: SidebarProps) {
+  const formattedCurrentWeather = Math.floor(currentWeather?.temp);
 
-function Sidebar({}: SidebarProps) {
+  const formattedDate = format(fromUnixTime(currentWeather.dt), 'EEE,dd LLL');
+
+  console.log(formattedDate);
+
   return (
     <Container>
       <Header>
@@ -17,19 +37,23 @@ function Sidebar({}: SidebarProps) {
         </RoundButton>
       </Header>
       <WeatherInfo>
-        <img src={IsoRainSwrsDay} alt="Rain" />
+        <img
+          src={`http://openweathermap.org/img/wn/${currentWeather.weather[0].icon}@4x.png`}
+          alt={currentWeather.weather[0].description}
+        />
         <h1>
-          15<span>ºC</span>
+          {formattedCurrentWeather}
+          <span>ºC</span>
         </h1>
-        <h2>Shower</h2>
+        <h2>{currentWeather?.weather[0].main}</h2>
       </WeatherInfo>
       <Footer>
         <p>
-          Today<span>•</span>Fri, 5 Jun
+          Today<span>•</span>{formattedDate}
         </p>
         <City>
           <MdPlace size={24} />
-          <p>Helsinki</p>
+          <p>{city}</p>
         </City>
       </Footer>
     </Container>
