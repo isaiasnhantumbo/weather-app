@@ -9,10 +9,18 @@ export default createGlobalStyle`
 body{
   font: 16px "Raleway", Arial, sans-serif;
   color: #E7E7EB;
+  background: #100e1d;
 }
 
 button{
   border: none;
 }
-
+html{
+    @media (max-width:1080px){
+        font-size: 93.75%;
+    }
+    @media (max-width:720px){
+        font-size: 87.5%;
+    }
+}
 `;
