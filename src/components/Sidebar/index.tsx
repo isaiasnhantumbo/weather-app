@@ -22,11 +22,9 @@ interface SidebarProps {
 }
 
 function Sidebar({ city, currentWeather }: SidebarProps) {
-  const formattedCurrentWeather = Math.floor(currentWeather?.temp);
+  const formattedCurrentWeather = Math.floor(currentWeather.temp);
 
   const formattedDate = format(fromUnixTime(currentWeather.dt), 'EEE,dd LLL');
-
-  console.log(formattedDate);
 
   return (
     <Container>
@@ -45,11 +43,12 @@ function Sidebar({ city, currentWeather }: SidebarProps) {
           {formattedCurrentWeather}
           <span>ºC</span>
         </h1>
-        <h2>{currentWeather?.weather[0].main}</h2>
+        <h2>{currentWeather.weather[0].main}</h2>
       </WeatherInfo>
       <Footer>
         <p>
-          Today<span>•</span>{formattedDate}
+          Today<span>•</span>
+          {formattedDate}
         </p>
         <City>
           <MdPlace size={24} />
