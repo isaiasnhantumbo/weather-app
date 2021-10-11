@@ -1,5 +1,3 @@
-import { format, fromUnixTime } from 'date-fns';
-import { ReactNode, useState } from 'react';
 import { WeatherDailyCard } from '../WeatherDailyCard';
 
 import { Container } from './styles';
@@ -17,16 +15,6 @@ interface WeatherStateListProps {
       icon: string;
     }[];
   }[];
-}
-interface WeatherDaily {
-  minTemperature: number;
-  maxTemperature: number;
-  weekDay: string;
-  weatherState: {
-    main: string;
-    description: string;
-    icon: string;
-  };
 }
 
 export function WeatherStateList({ daily }: WeatherStateListProps) {
