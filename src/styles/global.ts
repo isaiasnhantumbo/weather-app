@@ -6,6 +6,9 @@ export default createGlobalStyle`
   padding:0;
   box-sizing: border-box;
 }
+:root{
+  --animate-duration: 2s;
+}
 body{
   font: 16px "Raleway", Arial, sans-serif;
   color: #E7E7EB;
@@ -19,8 +22,11 @@ html{
     @media (max-width:1080px){
         font-size: 93.75%;
     }
-    @media (max-width:720px){
+    @media (max-width:1366px){
         font-size: 87.5%;
+    }
+    @media (max-width:720px){
+        font-size: 81.25%;
     }
 }
 `;

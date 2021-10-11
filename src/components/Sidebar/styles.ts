@@ -1,9 +1,6 @@
 import styled from 'styled-components';
 
 export const Container = styled.aside`
-  /* background-image: url('/images/Cloud-background.png');
-  background-position: center;
-  background-repeat: no-repeat; */
   height: 100vh;
   width: 28.75rem;
   display: flex;
@@ -11,6 +8,9 @@ export const Container = styled.aside`
   align-items: center;
   padding: 2.875rem 0;
   background: #1e213a;
+  @media (max-width: 720px) {
+    width: 100%;
+  }
 `;
 export const Header = styled.header`
   width: 100%;

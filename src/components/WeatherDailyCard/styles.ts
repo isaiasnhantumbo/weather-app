@@ -5,8 +5,8 @@ interface TemperatureValueProps {
 }
 
 export const Container = styled.div`
-  width: 132px;
-  height: 177px;
+  width: 8.25rem;
+  height: 12rem;
   background: #1e213a;
   display: flex;
   flex-direction: column;
@@ -19,11 +19,6 @@ export const Container = styled.div`
     text-align: center;
     color: #e7e7eb;
   }
-  img {
-    /* width: 55px; */
-    /* height: 63px; */
-    /* margin: 0.625rem 0 2rem 0; */
-  }
   .temperatureValueContainer {
     display: flex;
     gap: 1rem;
@@ -31,7 +26,7 @@ export const Container = styled.div`
 `;
 export const TemperatureValue = styled.p<TemperatureValueProps>`
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 19px;
   color: ${(props) => (props.isMinTemperature ? '#A09FB1' : '#E7E7EB')};
 `;
