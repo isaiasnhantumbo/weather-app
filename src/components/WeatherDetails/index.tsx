@@ -1,7 +1,6 @@
-import { ReactNode } from 'react';
 import { MdNearMe } from 'react-icons/md';
 
-import { Card, CardContainer, Container } from './styles';
+import { Bar, Card, CardContainer, Container } from './styles';
 
 interface WeatherDetailsProps {
   windSpeed: number;
@@ -35,11 +34,9 @@ export function WeatherDetails({
           <p>Humidity</p>
           <h1>{humidity}%</h1>
           <div>
-            <span>0</span>
-            <span>50</span>
-            <span>10</span>
-            <div className="bar" />
-            <span>%</span>
+            <Bar>
+              <div style={{ width: `${humidity}%` }} />
+            </Bar>
           </div>
         </Card>
         <Card isSmallCard>

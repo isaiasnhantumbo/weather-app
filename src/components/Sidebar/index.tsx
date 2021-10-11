@@ -1,6 +1,4 @@
-import React, { useState } from 'react';
-import { RoundButton } from '../RoundButton';
-import { MdMyLocation, MdPlace } from 'react-icons/md';
+import { MdPlace } from 'react-icons/md';
 
 import { City, Container, Footer, Header, WeatherInfo } from './styles';
 import { format, fromUnixTime } from 'date-fns';
@@ -29,16 +27,12 @@ function Sidebar({ city, currentWeather }: SidebarProps) {
   return (
     <Container>
       <Header>
-        <button className="search-button">Search for places</button>
-        <RoundButton>
-          <MdMyLocation size={22} />
-        </RoundButton>
-      </Header>
-      <WeatherInfo>
         <img
           src={`http://openweathermap.org/img/wn/${currentWeather.weather[0].icon}@4x.png`}
           alt={currentWeather.weather[0].description}
         />
+      </Header>
+      <WeatherInfo>
         <h1>
           {formattedCurrentWeather}
           <span>ºC</span>
