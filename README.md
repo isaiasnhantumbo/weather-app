@@ -45,6 +45,8 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - React-icons
 - Axios
 - Date-fns
+- OpenWeather API
+- Ipstack API
 
 
 
