@@ -28,10 +28,10 @@ O <span>Weather-app</span> é aplicativo de previsão de tempo que permite que o
 
 
 
-<h1 align="center"> 
+<!-- <h1 align="center"> 
 
 <a href="https://exweather-app.vercel.app">Acessar demonstração</a>
-</h1>
+</h1> -->
 
 
 ## 🛠 Tecnologias usadas
